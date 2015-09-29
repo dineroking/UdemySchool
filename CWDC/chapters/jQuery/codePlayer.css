@@ -1,0 +1,160 @@
+/**
+* Project: UdemySchool.
+* By: Ronny Rosabal
+* Date: 7/17/15
+* Time: 2:07 PM
+* Content: css code for the Udemy project code player
+*/
+
+/**************************************
+Table of Content
+***************************************/
+
+/*
+* #GENERAL
+*  ~body
+*  ~clear
+*  ~float
+*
+*
+*
+* #HEADER
+*  ~headerContainer
+*
+*
+*
+* #BODY
+*
+*
+*
+* #FOOTER
+*/
+
+
+
+/**************************************
+#GENERAL
+***************************************/
+
+/* ~body */
+body{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;/* from Better Helvetica */
+}
+
+/* ~clear */
+.clear{
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+/* ~float */
+.leftFloat{
+  float: left;
+}
+
+.rightFloat{
+  float: right;
+}
+
+
+
+/**************************************
+#HEADER
+***************************************/
+
+/* ~headerContainer */
+#headerContainer{
+  width: 100%;
+  height: 40px;
+  padding-top: 5px;
+  background-color: #dedede;
+  vertical-align: middle;
+}
+
+#logo{
+  margin:6px 15px;
+}
+
+#toggles{
+  width: 178px;
+  height: 30px;
+  margin: 0 auto;
+  border: 1px solid #787878;
+  border-radius: 5px;
+}
+
+#toggles ul{
+  list-style: none;
+}
+
+#toggles li{
+  padding: 7px 5px;
+  float: left;
+  border-right: 1px solid #787878;
+}
+
+#runButton{
+  width: 30px;
+  height: 30px;
+  margin: -30px 5px 5px 5px;
+  padding-left:2px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#toggles li.last{
+  border-right:none;
+}
+
+.selected{
+  color: #fff;
+  background-color: #787878;
+}
+
+
+
+/**************************************
+#BODY
+***************************************/
+
+/* ~codeContainer */
+.codeContainer{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.codeContainer textarea{
+  width: 99%;
+  height: 100%;
+  padding: 5px;
+  border: none;
+  border-right: 1px solid #787878;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+.codeLabel{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#CSS, #JS{
+  display: none;
+}
+
+iframe{
+  width: 99%;
+  height: 100%;
+  border: none;
+}
+
+
+
+/**************************************
+#FOOTER
+***************************************/

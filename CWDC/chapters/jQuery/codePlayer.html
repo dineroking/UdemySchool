@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="codePlayer.css">
+    <script type="text/javascript" src="jquery2.min.js" defer="defer"></script>
+    <script type="text/javascript" src="jquery-ui.js" defer="defer"></script>
+    <script type="text/javascript" src="codePlayer.js" defer="defer"></script>
+    <title>Code Player</title>
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <div id="headerContainer">
+
+        <header>
+
+          <h3 class="leftFloat" id="logo">CodePlayer</h3>
+
+          <nav id="toggles">
+            <ul>
+              <li class="toggle selected">HTML</li>
+              <li class="toggle">CSS</li>
+              <li class="toggle">JS</li>
+              <li class="last toggle selected">Result</li>
+            </ul>
+          </nav>
+
+          <button class="rightFloat" id="runButton">Run</button>
+
+        </header>
+
+      </div><!--end of header-->
+
+      <div class="clear"></div>
+
+      <div id="bodyContainer">
+
+        <div class="codeContainer" id="HTML">
+
+          <div class="codeLabel">HTML</div>
+
+          <textarea id="htmlCode">Code here</textarea>
+
+        </div>
+
+        <div class="codeContainer" id="CSS">
+
+          <div class="codeLabel">CSS</div>
+
+          <textarea id="cssCode">html{background-color: red}</textarea>
+
+        </div>
+
+        <div class="codeContainer" id="JS">
+
+          <div class="codeLabel">JS</div>
+
+          <textarea id="jsCode">alert('almost done');</textarea>
+
+        </div>
+
+        <div class="codeContainer" id="Result">
+
+          <div class="codeLabel">Result</div>
+
+          <iframe id="resultFrame"></iframe>
+
+        </div>
+
+        <div class="clear"></div>
+
+      </div><!--end of body-->
+
+      <div id="footerContainer">
+
+        <footer></footer>
+
+      </div><!--end of footer-->
+
+    </div><!--end of wrapper-->
+
+  </body>
+</html>

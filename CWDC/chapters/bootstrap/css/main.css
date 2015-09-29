@@ -1,0 +1,60 @@
+/**
+* Project: UdemySchool.
+* By: Ronny Rosabal
+* Date: 9/4/15
+* Time: 12:02 PM
+* Content: 
+*/
+
+#div1{
+  background-color: red;
+}
+#div2{
+  background-color: green;
+}
+
+#div3{
+  background-color: blue;
+}
+
+.contentDiv{
+  height: 800px;
+}
+
+#topContainer{
+  background-image:url("../images/background.jpg");
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+}
+
+#topRow{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.marginTop{
+  margin-top: 30px;
+}
+
+.center{
+  text-align: center;
+}
+
+#footer{
+  margin-top: 100px;
+  background-color: lightblue;
+  width: 100%;
+}
+
+.marginBottom{
+  margin-bottom: 30px;
+}
+
+.appstoreImage{
+  width: 250px;
+}

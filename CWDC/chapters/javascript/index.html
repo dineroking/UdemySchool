@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>Learning JavaScript</title>
+
+    <style>
+
+      #circle{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="circle"></div>
+
+    <button id="firstButton">Change first div text</button><br>
+
+    <div id="firstDiv">Text inside first div</div><br>
+
+    <button id="secondButton">Append some text.</button><br>
+
+    <div id="secondDiv">Text inside second div</div><br>
+
+    <button id="thirdButton">Create some text</button>
+
+    <div id="thirdDiv"></div><br><br>
+
+    <input id="myInput" type="text"><button id="myButton">click to copy</button><br><br>
+
+    <div id="copied"></div>
+
+    <div id="fingerGame">
+
+      <p>guess how many finger I'm holding up:</p>
+      <input id="guess" type="text">
+      <input id="guessButton" type="submit" value="send your guess">
+      <p>your guess was: <span id="yourAnswer"></span>. I was holding <span id="myFinger"></span> finger(s).</p>
+      <p id="gameAnswer"></p>
+
+    </div>
+
+    <div>
+
+      <button onclick="myWrite()">Write Me</button>
+
+    </div>
+
+    <div>
+
+      <button id="time">What time is it?</button>
+
+    </div>
+
+    <div>
+
+      <p id="strings"></p>
+
+    </div>
+
+    <div>
+
+      <p id="array"></p>
+
+    </div>
+
+
+    <div>
+
+      <p id="error"></p>
+
+    </div>
+
+
+    <div>
+
+      <p>Enter a number between 5 and 10:</p>
+      <input id="errorInput" type="text">
+      <button id="errorButton" type="button" onclick="errorFunction()">Send</button>
+      <p id="errorMessage"></p>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+      document.getElementById('firstButton').onclick=function(){
+
+        document.getElementById('firstDiv').innerHTML = "The text has been change!";
+
+      };
+
+      document.getElementById('secondButton').onclick=function(){
+
+        document.getElementById('secondDiv').innerHTML += " appended text";
+
+      };
+
+      document.getElementById('thirdButton').onclick=function(){
+
+        document.getElementById('thirdDiv').innerHTML = "<ul><li>dogs</li><li>cats</li></ul>";
+
+      };
+
+      document.getElementById('circle').onclick=function(){
+
+        document.getElementById('circle').style.display="none";
+
+      };
+
+      document.getElementById('myButton').onclick=function(){
+
+        var my_input = document.getElementById('myInput').value;
+
+        document.getElementById('copied').innerHTML = my_input;
+
+        document.getElementById('myInput').value = "";
+      };
+
+      //the script for the finger game.
+      document.getElementById('guessButton').onclick = function(){
+        var myFingers = Math.floor((Math.random() * 5) + 1);
+        document.getElementById('yourAnswer').innerHTML = document.getElementById('guess').value;
+        document.getElementById('myFinger').innerHTML = myFingers;
+        if(myFingers == document.getElementById('guess').value){
+          document.getElementById('gameAnswer').innerHTML = "YOU WON!!!";
+        }else{
+          document.getElementById('gameAnswer').innerHTML = "Sorry, you lost. Try again.";
+        }
+      };
+
+      var myWrite = function(){
+
+        document.write(20 + 23);
+
+      };
+
+      console.log(typeof "Yes");
+      console.log(typeof 45);
+      console.log(typeof [23,45,45,23]);
+      console.log(typeof {name:"ronny", last:"rosabal"});
+
+      //OBJECT
+
+      var person = {
+        firstName: "Ronny",
+        lastName:"Rosabal",
+        age:32,
+        sex:"Yes please!",
+        fullName: function(){return this.firstName + " " + this.lastName}
+      };
+
+      console.log(person.firstName);
+      console.log(person.fullName());
+
+      var startTime = function(){
+
+        var today = new Date();
+        var month = today.getMonth() + 1;
+        var day = today.getDate();
+        var year = today.getFullYear();
+        var hour = today.getHours();
+        var minute = today.getMinutes();
+        var second = today.getSeconds();
+
+        document.getElementById('time').innerHTML = month +
+          "." + day + "." + year + " " + hour + "." + minute +
+          "." + second;
+
+        var t = setTimeout(function(){
+
+          startTime();
+
+        }, 1000)
+      };
+
+      document.getElementById('time').onclick = function() {
+
+        startTime();
+
+      };
+
+      var myName = "Ronny Rosabal";
+      var status = "is the top dog.";
+
+      document.getElementById('strings').innerHTML = myName.concat(" ", status);
+
+      var number = 2;
+
+      while(number != Infinity){
+
+        number = number * number;
+        console.log(number);
+
+      }
+
+      var noNumber = 100 / "number";
+
+      console.log(typeof noNumber);
+
+      if(isNaN(noNumber)){
+
+        console.log('noNumber is not a number');
+
+      }
+
+      console.log(Number.MAX_VALUE);
+      console.log(Number.NaN);
+      console.log(Number.MIN_VALUE);
+      var notNumber = '100';
+      var floatN = 1.1;
+      console.log(parseFloat(notNumber));
+
+      var x = true;
+      console.log(Number(x));//should return 1
+
+      var numArray = [23, 45, 23, 12, 100, 67, 1, 5, 500];
+      console.log(Math.min(23, 45, 23, 12, 100, 67));
+      console.log(Math.max(23, 45, 23, 12, 100, 67));
+
+      var today = new Date('2015-08-19T13:00:00');
+      console.log(today);
+
+      var names = [
+        "Ronny",
+        "Christian",
+        "Leslie"
+      ];
+
+      document.getElementById('array').innerHTML = names;
+
+      console.log('wrongly sorted array');
+      console.log(numArray.sort());
+      console.log('correctly sorted array');
+      console.log(numArray.sort(function(a,b){
+        return a-b;
+      }));
+      console.log('correctly reversed sorted array');
+      console.log(numArray.sort(function(a,b){
+        return b-a;
+      }));
+
+      switch (new Date().getDay()){
+        case 0:
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+          break;
+      }
+
+      console.log(day);
+
+      console.log("Ronny".constructor);
+      console.log(new Date().constructor);
+      console.log([1,2,3,5].constructor);
+
+      function isArray(myArray){
+        return myArray.constructor.toString().indexOf('Array') > -1;
+      }
+
+      function isDate(myDate){
+        return myDate.constructor.toString().indexOf('Date') > -1;
+      }
+
+      var sArray = [1,3,4,5];
+      var sDate = new Date;
+
+      console.log(isArray(sArray));//true
+      console.log(isArray(sDate));//false
+      console.log(isDate(sDate));//true
+      console.log(isDate(sArray));//false
+
+      console.log(String(Date()));
+      console.log(Date().toString());
+
+      var sTime = new Date();
+
+      console.log(sTime);
+      console.log(sTime.getTime());
+      console.log(Number(sTime));
+
+      try{
+        alrt('This is a message');
+      }
+      catch(err){
+        document.getElementById('error').innerHTML = err.message;
+      }
+
+      //error code
+
+      function errorFunction(){
+        var message, x;
+
+        message = document.getElementById('errorMessage');//the text for the resulting error message
+        message.innerHTML = "";
+        x = document.getElementById('errorInput').value;
+
+        debugger;
+        try{
+          Number(x);
+          if(x == "")throw "empty";
+          if(isNaN(x))throw "not a number";
+          if(x < 5)throw "too low";
+          if(x > 10)throw "too high";
+        }
+        catch(err){
+          message.innerHTML = "Input is " + err;
+        }
+        finally{
+          document.getElementById('errorInput').value = "";//clears the value of the input box
+        }
+      }
+
+    </script>
+
+  </body>
+</html>

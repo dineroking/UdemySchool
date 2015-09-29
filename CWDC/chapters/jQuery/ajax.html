@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="jquery2.min.js"></script>
+    <title>AJAX</title>
+  </head>
+  <body>
+
+    <h1>Asyncronous JavaScript And XML</h1>
+
+    <script>
+
+      /*$.get("test.html", function(data){
+
+        $('h1').html('This header was changed using AJAX.')
+
+      });*/
+
+      $.ajax({
+        url:"test.html"
+      }).done(function(data){
+
+        $('h1').html(data); //changes the header in ajax.html to the data in test.html
+
+      });
+
+    </script>
+
+  </body>
+</html>

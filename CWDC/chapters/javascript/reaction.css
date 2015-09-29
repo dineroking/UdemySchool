@@ -1,0 +1,120 @@
+/**
+* Project: UdemySchool.
+* By: Ronny Rosabal
+* Date: 6/12/15
+* Time: 6:50 PM
+* Content: the main style sheet for the reaction.html file
+*/
+
+
+
+/**************************************
+REACTION MAIN STYLESHEET
+***************************************/
+
+
+
+/**************************************
+TABLE OF CONTENT
+***************************************/
+
+/*
+* #GENERAL
+*  ~body
+*  ~headers
+*
+* #BODY
+*
+* #HEADER
+*
+* #FOOTER
+*/
+
+
+
+/**************************************
+#GENERAL
+***************************************/
+
+/* ~body */
+
+body{
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ~headers */
+
+h1{
+  font-size: 2em;
+}
+
+h2{
+  font-size: 1.8em;
+}
+
+h3{
+  font-size: 1.6em;
+}
+
+h4{
+  font-size: 1.4em;
+}
+
+h5{
+  font-size: 1.2em;
+}
+
+h6{
+  font-size: 1em;
+}
+
+
+
+/**************************************
+#HEADER
+***************************************/
+
+header{
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/**************************************
+#BODY
+***************************************/
+
+section{
+  text-align: center;
+}
+
+div button{
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+#shape{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #dd1111;
+  display: none;
+}
+
+p, ol, ul{
+  margin: 5% 0;
+}
+
+ol{
+  list-style-position: inside;
+}
+
+
+
+/**************************************
+#FOOTER
+***************************************/

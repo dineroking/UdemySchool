@@ -1,0 +1,122 @@
+/**
+* Project: UdemySchool.
+* By: Ronny Rosabal
+* Date: 6/24/15
+* Time: 1:30 PM
+* Content: 
+*/
+
+/**************************************
+Table of Contents
+***************************************/
+
+
+
+/**************************************
+GENERAL
+***************************************/
+
+
+
+/**************************************
+HEADER
+***************************************/
+
+
+
+/**************************************
+BODY
+***************************************/
+
+#wrapper{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.square{
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+
+#circle{
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  border-radius: 50px;
+}
+
+#circle2{
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  border-radius: 50px;
+}
+
+form input{
+  width: 200px;
+  height: 20px;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+form input:focus{
+  box-shadow: 0 0 0 3px #abced2;
+  outline: none;
+}
+
+form label{
+  width: 150px;
+  padding-top: 10px;
+  float: left;
+}
+
+input#submitButton{
+  width: 361px;
+  height: 35px;
+  border-radius: 1px;
+
+}
+
+#error{
+  margin: 20px;
+  font-style: italic;
+  color: red;
+}
+
+#dragMe{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: aqua;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#resizable{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: #abced2;
+  text-align: center;
+}
+
+#target{
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  background-color: darkkhaki;
+}
+
+
+
+/**************************************
+FOOTER
+***************************************/
+
