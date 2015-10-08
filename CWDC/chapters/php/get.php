@@ -23,7 +23,7 @@
 
         if($_GET["fname"]){
 
-          echo "Your name is " . $_GET['fname'];
+          echo "Your name is " . $_GET['fname'] . " " . $_GET['lname'];
 
         }
 
